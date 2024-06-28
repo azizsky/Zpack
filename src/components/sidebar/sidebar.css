@@ -1,0 +1,89 @@
+.sidebar {
+  border: 1px solid black;
+  width: 50vw;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  background: #0d283ea9;
+  text-align: center;
+  position: fixed;
+  top: 2rem;
+  height: auto;
+  opacity: 0;
+  right: -9rem;
+  transition: all 0.8s ease;
+  color: white;
+  z-index: 100;
+  overflow: scroll;
+}
+.title-sidebar {
+  font-size: 15px;
+  font-weight: 400;
+  background: black;
+  padding: 2px;
+  font-family: "kanit" , Sans-Serif;
+  user-select: none;
+}
+.content-produk-sidebar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.content-media-sidebar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  top: -10px;
+}
+.content-toko-sidebar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  top: -18px;
+}
+.content-sidebar {
+  border-bottom: 1px solid white;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  padding: 2px;
+  margin: 2px;
+  width: 100%;
+  height: 20px;
+}
+.icons-sidebar {
+  font-size: 20px;
+  font-weight: 200;
+}
+
+.teks-produk p {
+  user-select: none;
+}
+.teks-produk {
+  font-size: 18px;
+  text-align: start;
+  display: flex;
+  position: relative;
+  margin: auto;
+  margin-left: 8px;
+  margin-top: -6px;
+  font-family: "kanit", Sans-Serif;
+  user-select: none;
+  font-weight: 300;
+}
+.sidebar.open {
+    opacity: 1;
+    right: 0;
+}
+
+.sidebar-.close{
+    opacity: 0;
+}
+
+
+
+Link, a{
+  color :white;
+  text-decoration: none;
+  text-decoration-line: none;
+}

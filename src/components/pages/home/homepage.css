@@ -1,0 +1,51 @@
+.homepage {
+  height: 400vh;
+  top: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+}
+.home-content-1 {
+  display: flex;
+  flex-direction: column;
+  user-select:none;
+}
+.home-content-text-1 h1 { 
+  font-family: "Playwrite NG Modern", cursive;
+  font-size: 29px;
+  width: 90%;
+  margin: auto;
+  
+}
+.home-content-text-1 h3 { 
+  font-family: "Poppins", Sans-Serif;
+  font-size: 15px;
+  font-weight: 400;
+  width: 90%;
+  margin: auto;
+}
+.wave1 {
+  position: relative;
+  top: -20px;
+}
+.b {
+  position: relative;
+  top: 900rem;
+}
+
+
+/* animation */
+
+
+
+.fadeIn {
+  transform: scale(0.9);
+  opacity: 0;
+  transition: all 1s ease-in-out  ;
+}
+
+.fade-in {
+  transform: scale(1);
+  opacity: 1;
+}
