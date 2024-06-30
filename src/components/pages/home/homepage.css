@@ -49,3 +49,68 @@
   transform: scale(1);
   opacity: 1;
 }
+
+/* bagaianCategori catalog */
+.tittle-container {
+  font-family: "Playwrite NG Modern", cursive;
+  display: flex;
+  width: 100%;
+  height: 40px;
+  background-image: linear-gradient(white ,#5f92a4ce );
+  border-bottom: 1px solid black;
+  font-size: 20px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.container-categori-home {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.card-categori-home {
+  position: relative;
+  width: 145px;
+  height: 180px;
+  background: #7a9fb3ac;
+  text-align: center;
+  align-items: center;
+  margin: 10px;
+  box-shadow: 0px 0px 8px 3px #4a4a4ad8;
+  border-radius: 2px 2px 0 0;
+  padding: 2px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.img-categori-home {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 86%;
+  object-fit: cover;
+  user-select: none;
+}
+.text-categori-home {
+  font-family: "Poppins", Sans-Serif;
+  user-select: none;
+  font-weight: 300;
+  width: 100%;
+  height: 20px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 0;
+  color: black;
+}
+.card-categori-home:hover {
+  transform: scale(1.05);
+  color: black;
+}

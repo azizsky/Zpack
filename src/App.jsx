@@ -12,7 +12,6 @@ const App = () => {
   const btnSidebar = () => {
     setIsOpen(!isOpen);
   };
-
   return (
     <div className="App">
     <Header isOpen={isOpen} 

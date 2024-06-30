@@ -1,25 +1,26 @@
-import React from 'react';
+import React  from 'react';
 import './sidebar.css';
 import { Link } from 'react-router-dom';
   // import Icons
-import { MdMoveToInbox } 
+  import { GiPapers } from "react-icons/gi";
+import { MdMoveToInbox, MdAttachEmail, MdCalculate } 
   from "react-icons/md";
-import { BsInboxesFill, BsGearFill, BsWhatsapp, BsInstagram } 
+import { BsInboxesFill, BsGearFill, BsInstagram, BsFillInfoSquareFill } 
   from "react-icons/bs";
-import { TfiEmail } from "react-icons/tfi";
-import { SiTiktok } from "react-icons/si";
 import { IoLogoFacebook } from "react-icons/io";
-import { FaRegCalendarAlt, FaTags, FaToolbox, FaMap, FaShoppingBag } from "react-icons/fa";
-
+import { FaCartArrowDown,  FaHome, FaRegCalendarAlt, FaTags, FaToolbox, FaMap, FaShoppingBag, FaWhatsappSquare, FaInstagramSquare } from "react-icons/fa";
+import { AiFillTikTok } from "react-icons/ai";
 
 const Sidebar = ({isOpen}) => {
   
   
+  
   return (
-    <div className={`sidebar ${isOpen ? 'open' : 'close'}`}>
-      <div className="content-produk-sidebar">
+    <div className={`sidebar ${isOpen ? 'open' : 'c'}`}>
+    
       <h2 className="title-sidebar">
         Produk Kami </h2>
+      <div className="content-produk-sidebar">
         <Link to="#">
           <div className="content-sidebar">
             <BsInboxesFill className="icons-sidebar"/>
@@ -68,19 +69,19 @@ const Sidebar = ({isOpen}) => {
         Kontak & Media Kami </h2>
         <Link to="#">
           <div className="content-sidebar">
-            <BsWhatsapp className="icons-sidebar"/>
+            <FaWhatsappSquare className="icons-sidebar"/>
             <p className="teks-produk">Whatsapp</p>
           </div>
         </Link>
         <Link to="#">
           <div className="content-sidebar">
-            <TfiEmail className="icons-sidebar"/>
+            <MdAttachEmail className="icons-sidebar"/>
             <p className="teks-produk">Email</p>
           </div>
         </Link>
         <Link to="#">
           <div className="content-sidebar">
-            <BsInstagram className="icons-sidebar"/>
+            <FaInstagramSquare className="icons-sidebar"/>
             <p className="teks-produk">Instagram</p>
           </div>
         </Link>
@@ -92,7 +93,7 @@ const Sidebar = ({isOpen}) => {
         </Link>
         <Link to="#">
           <div className="content-sidebar">
-            <SiTiktok className="icons-sidebar"/>
+            <AiFillTikTok className="icons-sidebar"/>
             <p className="teks-produk">Tiktok</p>
           </div>
         </Link>
@@ -102,32 +103,53 @@ const Sidebar = ({isOpen}) => {
         Toko Ecommerce Kami </h2>
         <Link to="#">
           <div className="content-sidebar">
-            <BsWhatsapp className="icons-sidebar"/>
-            <p className="teks-produk">Whatsapp</p>
+            <MdAttachEmail className="icons-sidebar"/>
+            <p className="teks-produk">Shoope</p>
           </div>
         </Link>
         <Link to="#">
           <div className="content-sidebar">
-            <TfiEmail className="icons-sidebar"/>
-            <p className="teks-produk">Email</p>
+            <MdAttachEmail className="icons-sidebar"/>
+            <p className="teks-produk">TokoPedia</p>
           </div>
         </Link>
         <Link to="#">
           <div className="content-sidebar">
             <BsInstagram className="icons-sidebar"/>
-            <p className="teks-produk">Instagram</p>
+            <p className="teks-produk">Lazada</p>
+          </div>
+        </Link>
+      <div className="content-web-sidebar">
+        <h2 className="title-sidebar">
+        Halaman Web </h2>
+        <Link to="/">
+          <div className="content-sidebar">
+            <FaHome className="icons-sidebar"/>
+            <p className="teks-produk">Beranda</p>
           </div>
         </Link>
         <Link to="#">
           <div className="content-sidebar">
-            <IoLogoFacebook className="icons-sidebar"/>
-            <p className="teks-produk">Facebook</p>
+            <GiPapers className="icons-sidebar"/>
+            <p className="teks-produk">info Produk</p>
           </div>
         </Link>
         <Link to="#">
           <div className="content-sidebar">
-            <SiTiktok className="icons-sidebar"/>
-            <p className="teks-produk">Tiktok</p>
+            <FaCartArrowDown className="icons-sidebar"/>
+            <p className="teks-produk">Info Order</p>
+          </div>
+        </Link>
+        <Link to="#">
+          <div className="content-sidebar">
+            <MdCalculate className="icons-sidebar"/>
+            <p className="teks-produk">Calk Produk</p>
+          </div>
+        </Link>
+        <Link to="#">
+          <div className="content-sidebar">
+            <BsFillInfoSquareFill className="icons-sidebar"/>
+            <p className="teks-produk">Tentang Kami</p>
           </div>
         </Link>
         <Link to="#">
@@ -137,6 +159,7 @@ const Sidebar = ({isOpen}) => {
           </div>
         </Link>
       </div>
+    </div>
     
     </div>
     );

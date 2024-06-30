@@ -4,6 +4,8 @@ import waveSvgT from '../../../utilities/home/waveModeWT.svg';
 import waveSvgB from '../../../utilities/home/waveModeWB.svg';
 import { animateOnScroll } 
   from './../../../animation.js';
+import { Link } from 'react-router-dom';
+
 
 const HomePage = () => {
   
@@ -12,11 +14,8 @@ const HomePage = () => {
   useEffect(() => {
     const element = elementRef.current;
 
-    // Pastikan elemen tersedia sebelum memanggil fungsi animasi
     if (element) {
       const observer = animateOnScroll(element, 'fade-in');
-
-      // Membersihkan observer saat komponen dibongkar
       return () => {
         if (observer) observer.disconnect();
       };
@@ -37,6 +36,51 @@ const HomePage = () => {
         </div>
         <img src={waveSvgB} alt="wave" className="wave1" />
       </div>
+      <div className="container-categori-home">
+        <h1 className="tittle-container ">Lihat Categori Produk</h1>
+        <Link to="#">
+          <div className="card-categori-home">
+            <img 
+              src="./image/content/bag.jpg" 
+              className="img-categori-home"
+              alt="paperbag"/> 
+            <p className="text-categori-home">PaperBag</p>
+          </div>
+        </Link>
+        <Link to="#">
+          <div className="card-categori-home">
+            <img 
+              src="./image/content/bag.jpg" 
+              className="img-categori-home"
+              alt="paperbag"/> 
+            <p className="text-categori-home">PaperBag</p>
+          </div>
+        </Link>
+        <Link to="#">
+          <div className="card-categori-home">
+            <img 
+              src="./image/content/bag.jpg" 
+              className="img-categori-home"
+              alt="paperbag"/> 
+            <p className="text-categori-home">PaperBag</p>
+          </div>
+        </Link>
+        <Link to="#">
+          <div className="card-categori-home">
+            <img 
+              src="./image/content/bag.jpg" 
+              className="img-categori-home"
+              alt="paperbag"/> 
+            <p className="text-categori-home">PaperBag</p>
+          </div>
+        </Link>
+        
+      </div>
+      
+      
+      
+      
+      
       <div className="b">gshhshshhd
       </div>
     </div>
