@@ -1,0 +1,49 @@
+.containertentang {
+   position: relative;
+   width: 100vw;
+   top: 5rem;
+   font-size: 25px;
+   display: flex;
+   flex-direction: column;
+}
+.isikami h1 { 
+   
+   font-size: 20px;
+   font-weight: 700;
+}
+.isikami div {
+   margin-top: 15px;
+   padding: 10px;
+   text-align: center;
+   gap: 3px;
+}
+
+.isikami  {
+   width: 98vw;
+   position: relative;
+   margin: auto;
+   font-size: 15px;
+   line-height: 25px;
+   font-weight: 200;
+   font-family: "Poppins", Sans-Serif;
+}
+.isikami h2 {
+   text-align: start;
+   line-height: 25px;
+   font-weight: bold;
+   font-size: 20px;
+}
+@media ( min-width: 767px) {
+   .textdiv { 
+      max-width: 45vw; 
+   }
+   .textdiv{ 
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+   }
+}
+.concel {
+  opacity: 0;
+}
+

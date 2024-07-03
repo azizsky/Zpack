@@ -7,4 +7,5 @@
   margin: auto;
   left: 0;
   background: white;
+  overflow-y: scroll;
 }

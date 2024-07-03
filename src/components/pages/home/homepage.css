@@ -1,10 +1,10 @@
 .homepage {
-  height: 400vh;
+  height: auto;
   top: 0;
   position: relative;
   display: flex;
   flex-direction: column;
-  overflow: scroll;
+  overflow-y: auto;
 }
 .home-content-1 {
   display: flex;
@@ -29,30 +29,71 @@
   position: relative;
   top: -20px;
 }
-.b {
+.wave2 {
   position: relative;
-  top: 900rem;
+  transform: rotate(180deg);
+  top: 30px;
 }
+
+@media (min-width: 767px) {
+  .wave2 {
+    display: none;
+  }
+}
+@media (min-width: 1023px) {
+  .home-content-text-1 h1 { 
+    font-family: "Playwrite NG Modern", cursive;
+    font-size: 38px;
+    width: 90%;
+    margin: auto;
+  }
+ .home-content-text-1 h3 { 
+    font-size: 13px;
+  }
+  
+}
+@media (min-width: 1279px) {
+  .home-content-text-1 h1 { 
+    font-family: "Playwrite NG Modern", cursive;
+    font-size: 38px;
+    width: 90%;
+    margin: auto;
+  }
+ .home-content-text-1 h3 { 
+    font-size: 17px;
+  }
+  
+}
+
 
 
 /* animation */
 
+@keyframes zoom-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
+.zoom-in {
+  animation: zoom-in 1s forwards;
+}
 
-.fadeIn {
-  transform: scale(0.9);
+.hidden {
+  visibility: hidden;
   opacity: 0;
-  transition: all 1s ease-in-out  ;
+  transition: visibility 0.5s, opacity 0.5s ease;
 }
 
-.fade-in {
-  transform: scale(1);
-  opacity: 1;
-}
 
 /* bagaianCategori catalog */
 .tittle-container {
-  font-family: "Playwrite NG Modern", cursive;
+  font-family: "Lato", cursive;
+  color: black;
+  font-weight: 900;
   display: flex;
   width: 100%;
   height: 40px;
@@ -64,6 +105,7 @@
   justify-content: center;
 }
 .container-categori-home {
+  position: relative;
   width: 100%;
   height: auto;
   display: flex;
@@ -75,7 +117,7 @@
 .card-categori-home {
   position: relative;
   width: 145px;
-  height: 180px;
+  height: 188px;
   background: #7a9fb3ac;
   text-align: center;
   align-items: center;
@@ -84,7 +126,11 @@
   border-radius: 2px 2px 0 0;
   padding: 2px;
   cursor: pointer;
-  transition: all 0.5s ease;
+  transition: all 0.4s ease;
+}
+.card-categori-home:hover {
+  transform: scale(1.03);
+  
 }
 
 .img-categori-home {
@@ -98,9 +144,9 @@
   user-select: none;
 }
 .text-categori-home {
-  font-family: "Poppins", Sans-Serif;
+  font-family: "Lato", Sans-Serif;
   user-select: none;
-  font-weight: 300;
+  font-weight: 500;
   width: 100%;
   height: 20px;
   text-align: center;
@@ -110,7 +156,207 @@
   margin-top: 0;
   color: black;
 }
-.card-categori-home:hover {
-  transform: scale(1.05);
-  color: black;
+@media (min-width: 767px) {
+  .tittle-container {
+    font-size: 25px;
+  }
+  .card-categori-home {
+    width: 200px;
+    height: 240px;
+  }
+  .text-categori-home {
+    font-size: 22px;
+  }
+}
+@media (min-width: 1023px) {
+  .tittle-container {
+    font-size: 30px;
+    height: 50px;
+  }
+  .card-categori-home {
+    width: 200px;
+    height: 240px;
+  }
+  .text-categori-home {
+    font-size: 22px;
+  }
+}
+@media (min-width: 1279px) {
+  .tittle-container {
+    font-size: 30px;
+    height: 50px;
+  }
+  .card-categori-home {
+    width: 240px;
+    height: 280px;
+  }
+  .text-categori-home {
+    font-size: 25px;
+  }
+}
+
+
+
+/* Bagian Infprmation */
+
+.information-produk-home {
+  height: auto;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.fill-information-home {
+  user-select: none;
+  margin: auto;
+  width: 95%;
+}
+.fill-information-home h2 {
+  font-family: 'Lato', Sans-Serif;
+  text-align: start;
+  font-size: 20px;
+  font-weight: 600;
+}
+.fill-information-home h3 {
+  font-family: 'Poppins', Sans-Serif;
+  font-size: 17px;
+  font-weight: 300;
+}
+
+@media (max-width: 415px) {
+  .fill-information-home h2 {
+    font-size: 15px;
+  }
+  .fill-information-home h3 {
+    font-size: 14px;
+  }
+}
+@media (max-width: 600px) {
+  .fill-information-home h3 {
+    font-size: 13px;
+  }
+}
+@media (min-width: 767px) {
+  .fill-information-home h3 {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1023px) {
+  .fill-information-home {
+    width: 48%;
+  }
+  .fill-information-home h2 {
+    font-size: 26px;
+  }
+  .fill-information-home h3 {
+    font-size: 23px;
+    
+  }
+  
+  
+}
+@media (min-width: 1279px) {
+  .fill-information-home {
+    width: 48%;
+  }
+  .fill-information-home h2 {
+    font-size: 30px;
+  }
+  .fill-information-home h3 {
+    font-size: 26px;
+    
+  }
+  
+  
+}
+@media (min-width: 1439px) {
+  .fill-information-home {
+    width: 30%;
+    height: 400px;
+  }
+  .fill-information-home h2 {
+    font-size: 30px;
+  }
+  .fill-information-home h3 {
+    font-size: 26px;
+    
+  }
+  
+  
+}
+
+.Text-home-close {
+  position: relative;
+  font-size: 14px;
+  top: 0.5rem;
+  display: flex;
+  font-family: "Lato", Sans-Serif;
+  width: 90%;
+  margin: auto;
+}
+.bottom-home-close {
+  opacity: 0;
+  font-size: 18px;
+  position: relative;
+  top: 8rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: #1b1b1bbf;
+  margin: auto;
+  color: white;
+}
+
+.footer a, link{ 
+  text-decoration: none;
+  color: white;
+  
+}
+.footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 2px;
+  background-color: #335f77;
+  color: white;
+  flex-direction: row;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+  text-align: center;
+  height: 2.5rem;
+}
+
+.icon-container {
+  cursor: pointer;
+  margin: auto;
+  text-align: center;
+  font-size: 30px;
+}
+
+.icon-text {
+  visibility: hidden;
+  font-family: 'Kanit', Sans-Serif;
+  width: 120px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Adjust based on your needs */
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 15px;
+}
+
+.icon-container:hover .icon-text {
+  visibility: visible;
+  opacity: 1;
 }

@@ -1,22 +1,29 @@
-// animations.js
+import { useEffect } from 'react';
 
-export const animateOnScroll = (element, animation) => {
-  if (!element) return;
+const useIntersectionAnimation = (selector, animationClass, threshold = 0.1) => {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(animationClass);
+            entry.target.classList.remove('hidden');
+          } else {
+            entry.target.classList.remove(animationClass);
+            entry.target.classList.add('hidden');
+          }
+        });
+      },
+      { threshold }
+    );
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add(animation);
-        } else {
-          entry.target.classList.remove(animation);
-        }
-      });
-    },
-    { threshold: 0.1 }
-  );
+    const elements = document.querySelectorAll(selector);
+    elements.forEach(el => observer.observe(el));
 
-  observer.observe(element);
-
-  return observer; // Return the observer so it can be disconnected later
+    return () => {
+      elements.forEach(el => observer.unobserve(el));
+    };
+  }, [selector, animationClass, threshold]);
 };
+
+export default useIntersectionAnimation;

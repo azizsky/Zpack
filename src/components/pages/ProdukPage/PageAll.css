@@ -1,0 +1,103 @@
+.Container-Page {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.Container-tittle {
+  font-family: 'Kanit', Sans-Serif;
+  font-size: 20px;
+  font-weight: 400;
+  width: 80%;
+  margin: auto;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.674);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 5px;
+  padding: 5px;
+  height: 65vh;
+  width: 85vw;
+  text-align: center;
+  user-select: none;
+  line-height: 5px;
+}
+
+.modal-img {
+  width: 90%;
+  margin-bottom: 20px;
+  object-fit: cover;
+  user-select: none;
+  margin: auto;
+  position: relative;
+}
+.close-modal {
+  position: relative;
+  left: 0;
+  top: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 30px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+}
+.nama-produk {
+  font-family: "kanit", Sans-Serif;
+  font-weight: 500; 
+  font-size: 28px;
+}
+.deskripsi-produk {
+  font-family: "Poppins", Sans-Serif;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.harga-produk {
+  font-family: "kanit", Sans-Serif;
+  font-weight: 600;
+  font-size: 20px;
+}
+.wa-direct-modal {
+  position: relative;
+  font-family: "kanit", Sans-Serif;
+  height: 40px;
+  font-size: 30px;
+  border: none;
+  background: #17764b;
+  cursor: pointer;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+  bottom: 0;
+}
+.kembali {
+  position: relative;
+  top: 5px;
+  left: -45vw;
+  margin: auto;
+  font-size: 20px;
+}
+.close {
+  opacity: 0;
+
+  position: relative;
+}
