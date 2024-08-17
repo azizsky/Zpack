@@ -27,23 +27,31 @@
    font-weight: 200;
    font-family: "Poppins", Sans-Serif;
 }
+.isikami h3 {
+  font-weight: 300;
+}
 .isikami h2 {
    text-align: start;
    line-height: 25px;
-   font-weight: bold;
+   font-weight: 400;
    font-size: 20px;
 }
 @media ( min-width: 767px) {
    .textdiv { 
       max-width: 45vw; 
    }
-   .textdiv{ 
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-   }
 }
 .concel {
   opacity: 0;
 }
 
+@media (min-width: 1023px) {
+  .isikami {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .isikami div {
+    width: 48%;
+  }
+}

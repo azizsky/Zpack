@@ -40,6 +40,18 @@
     display: none;
   }
 }
+@media (max-width: 414px) {
+  .home-content-text-1 h1 { 
+    font-family: "Playwrite NG Modern", cursive;
+    font-size: 27px;
+    width: 90%;
+    margin: auto;
+  }
+ .home-content-text-1 h3 { 
+    font-size: 16px;
+  }
+  
+}
 @media (min-width: 1023px) {
   .home-content-text-1 h1 { 
     font-family: "Playwrite NG Modern", cursive;
@@ -116,8 +128,8 @@
 
 .card-categori-home {
   position: relative;
-  width: 145px;
-  height: 188px;
+  width: 170px;
+  height: 190px;
   background: #7a9fb3ac;
   text-align: center;
   align-items: center;
@@ -146,6 +158,7 @@
 .text-categori-home {
   font-family: "Lato", Sans-Serif;
   user-select: none;
+  font-size: 15px;
   font-weight: 500;
   width: 100%;
   height: 20px;
@@ -155,6 +168,15 @@
   position: relative;
   margin-top: 0;
   color: black;
+}
+@media (max-width: 413px) {
+  .tittle-container {
+    font-size: 18px;
+  }
+  .card-categori-home {
+    width: 130px;
+    height: 180px;
+  }
 }
 @media (min-width: 767px) {
   .tittle-container {
@@ -209,6 +231,10 @@
   justify-content: space-around;
 }
 
+.fill-information-home:hover {
+  border-bottom: 1px solid black;
+  
+}
 .fill-information-home {
   user-select: none;
   margin: auto;
@@ -333,8 +359,11 @@
 .icon-container {
   cursor: pointer;
   margin: auto;
+  align-items: center;
   text-align: center;
   font-size: 30px;
+  position: relative;
+  top: 4px;
 }
 
 .icon-text {
@@ -359,4 +388,24 @@
 .icon-container:hover .icon-text {
   visibility: visible;
   opacity: 1;
+}
+@media (min-width: 414px) {
+  .footer {
+    height: 2rem;
+  }
+  .icon-container {
+    font-size: 20px;
+  }
+  
+  
+}
+@media (min-width: 767px) {
+  .footer {
+    height: 3rem;
+  }
+  .icon-container {
+    font-size: 30px;
+  }
+  
+  
 }

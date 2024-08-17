@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import "./PageAll.css";
-import useIntersectionAnimation from './../../../animation';
 import { RiCloseLine } from "react-icons/ri";
 import { FaWhatsappSquare, FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import wave from '../../../utilities/home/wave.svg';
+import {Helmet, HelmetProvider } from 'react-helmet-async';
+
+
+
+
 const Modal = ({ show, onClose, product, onWhatsAppRedirect }) => {
   const handleCloseModal = (e) => {
     // Menutup modal hanya jika event klik terjadi di luar area modal
@@ -25,14 +29,13 @@ const Modal = ({ show, onClose, product, onWhatsAppRedirect }) => {
         <h1 className="nama-produk">Produk: {product.name}</h1>
         <h2 className="deskripsi-produk">Deskripsi: {product.deskripsi} </h2>
         <p className="harga-produk">Harga: {product.harga}</p>
-        <button className="wa-direct-modal" onClick={() => onWhatsAppRedirect(product)}><FaWhatsappSquare /> WhatsApp <FaArrowRight /></button>
+        <button className="wa-direct-modal" onClick={() => onWhatsAppRedirect(product)}><FaWhatsappSquare /> AlihKan Ke WhatsApp <FaArrowRight /></button>
       </div>
     </div>
   );
 };
 
 const DusMakanan = () => {
-  useIntersectionAnimation('.animate', 'zoom-in');
 
   const [showModal, setShowModal] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -56,24 +59,90 @@ const DusMakanan = () => {
 
   const products = [
     // produk 1
-    { name: 'PaperBag', image: '/image/content/bag.jpg', deskripsi: 'coba dari map', harga: 'Rp. 1000' },
-    // produk 2
-    { name: 'PaperBag', image: '/image/content/bag.jpg', deskripsi: 'coba dari map', harga: 'Rp. 2000' },
-    // produk 3
-    { name: 'PaperBag', image: '/image/content/bag.jpg', deskripsi: 'coba dari map', harga: 'Rp. 3000' },
-    // produk 4
-    { name: 'PaperBag', image: '/image/content/bag.jpg', deskripsi: 'coba dari map', harga: 'Rp. 4000' },
-    // produk 5
-    { name: 'PaperBag', image: '/image/content/bag.jpg', deskripsi: 'coba dari map', harga: 'Rp. 5000' },
-    // produk 6
-    { name: 'PaperBag', image: '/image/content/bag.jpg', deskripsi: 'coba dari map', harga: 'Rp. 5000' }
+    { name: 'fried chiken set', 
+      image: '/image/produkhome/makanan.jpg',
+      deskripsi: 'full set untuk kebutuhan fried chiken', 
+      harga: 'Rp. 7000' },
+    
+    { name: 'box kue kotak', 
+      image: '/image/produk/makanan/food.jpg',
+      deskripsi: 'cocok untuk untuk kue ukuran besar 20x20x10', 
+      harga: 'Rp. 2500' },
+    
+    { name: 'kemasan hot dog', 
+      image: '/image/produk/makanan/food1.jpg',
+      deskripsi: 'cocok buat kemasan hotdog atau sosis dll', 
+      harga: 'Rp. 1300' },
+    
+    { name: 'box sanwicth', 
+      image: '/image/produk/makanan/food2.jpg',
+      deskripsi: 'model segitiga ukuran 10cm x 5cm', 
+      harga: 'Rp. 1000' },
+    
+    { name: 'kemasan burger', 
+      image: '/image/produk/makanan/food3.jpg',
+      deskripsi: 'cocok buat wadah minuman, burger', 
+      harga: 'Rp. 800' },
+      
+    { name: 'kemasan roti', 
+      image: '/image/produk/makanan/food4.jpg',
+      deskripsi: 'cocok untuk kemasan roti burger dll', 
+      harga: 'Rp. 700' },
+      
+    { name: 'cupe cake', 
+      image: '/image/produk/makanan/food10.jpg',
+      deskripsi: 'cocok buat kemasan cup cake yang membutuhkan skat', 
+      harga: 'Rp. 1600' },
+      
+    { name: 'kemasan kentang', 
+      image: '/image/produk/makanan/food6.jpg',
+      deskripsi: 'cocok buat kemasan kentang', 
+      harga: 'Rp. 500' },
+      
+    { name: 'box chiken', 
+      image: '/image/produk/makanan/food7.jpg',
+      deskripsi: 'cocok buat kemasan chiken ukuran besar', 
+      harga: 'Rp. 3000' },
+      
+    { name: 'box burger', 
+      image: '/image/produk/makanan/food8.jpg',
+      deskripsi: 'cocok buat kemasan burger dll', 
+      harga: 'Rp. 1200' },
+      
+    { name: 'box kue jendela', 
+      image: '/image/produk/makanan/food9.jpg',
+      deskripsi: 'cocok buat kamu yang mau kuenya keliatan karena memiliki jendela', 
+      harga: 'Rp. 2000' },
+      
+    { name: 'box bronis', 
+      image: '/image/produk/makanan/food12.jpg',
+      deskripsi: 'cocok buat brounis yang keliatan isi nya', 
+      harga: 'Rp. 1600' },
+      
+    { name: 'box kue panjang', 
+      image: '/image/produk/makanan/food11.jpg',
+      deskripsi: 'cocok buat brounis ukuran 20 x 12 x 6', 
+      harga: 'Rp. 1700' },
+
+    
   ];
 
   return (
+  <HelmetProvider>
     <div className="Container-Page">
+      <Helmet>
+        <title>kemasan makanan</title>
+        <meta name="description" 
+          content="Temukan berbagai jenis kemasan makanan eksklusif dan inovatif untuk produk Anda. Hubungi kami." />
+        <meta name="keywords" 
+          content="dus makanan, packaging, kemasan makanan " />
+        <meta name="author" 
+          content="z pack devisi asz team" />
+
+      </Helmet>
       <img src={wave} alt="wave"/>
       <Link to="/" className="kembali"><FaArrowLeft /></Link>
-      <h2 className="Container-tittle"> pilih Kategori lengkap dus makanan untuk memudahkan Anda menemukan solusi penyimpanan makanan yang ideal</h2>
+      <h2 className="Container-tittle">Gambar Di Bawah Hanya Reperensi. Produk Yang Anda Inginkan Untuk Model, Desain, Ukuran Dan Pola Potongan. Jika Produk Yang Kamu Inginkan Tidak Ada Di Bawah Bukan Berarti Kami Tidak Bisa Buat, Kami Hanya Tidak Punya Desain Dan Gambar.. Untuk Harga Di Bawah Ini Relative Bisa Naik Atau Turun. Untuk Informasi Lebih Lengkap, Hubungi Kami Dengan Mengklik Produk Yang Dipilih, Dan Klik Tombol "Alihkan Ke WhatsApp". Anda Akan Otomatis Diarahkan Ke WhatsApp Kami. </h2>
       
       <div className="container-categori-home animate">
         {products.map((product, index) => (
@@ -139,6 +208,7 @@ const DusMakanan = () => {
         onWhatsAppRedirect={handleWhatsAppRedirect}
       />
     </div>
+  </HelmetProvider>
   );
 };
 

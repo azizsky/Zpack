@@ -8,7 +8,7 @@ const Kalkulasi = () => {
   
   return (
     <div className="KalkulasiPage">
-    gghhh
+      cooming soon !!!!!..
     </div>
     );
 };

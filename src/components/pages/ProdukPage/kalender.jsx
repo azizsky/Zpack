@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import "./PageAll.css";
-import useIntersectionAnimation from './../../../animation';
 import { RiCloseLine } from "react-icons/ri";
 import { FaWhatsappSquare, FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import wave from '../../../utilities/home/wave.svg';
+import {Helmet, HelmetProvider } from 'react-helmet-async';
+
+
+
+
 const Modal = ({ show, onClose, product, onWhatsAppRedirect }) => {
   const handleCloseModal = (e) => {
     // Menutup modal hanya jika event klik terjadi di luar area modal
@@ -25,14 +29,13 @@ const Modal = ({ show, onClose, product, onWhatsAppRedirect }) => {
         <h1 className="nama-produk">Produk: {product.name}</h1>
         <h2 className="deskripsi-produk">Deskripsi: {product.deskripsi} </h2>
         <p className="harga-produk">Harga: {product.harga}</p>
-        <button className="wa-direct-modal" onClick={() => onWhatsAppRedirect(product)}><FaWhatsappSquare /> WhatsApp <FaArrowRight /></button>
+        <button className="wa-direct-modal" onClick={() => onWhatsAppRedirect(product)}><FaWhatsappSquare /> AlihKan Ke WhatsApp <FaArrowRight /></button>
       </div>
     </div>
   );
 };
 
-const Kalender = () => {
-  useIntersectionAnimation('.animate', 'zoom-in');
+const DusMakanan = () => {
 
   const [showModal, setShowModal] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -56,24 +59,56 @@ const Kalender = () => {
 
   const products = [
     // produk 1
-    { name: 'PaperBag', image: '/image/content/bag.jpg', deskripsi: 'coba dari map', harga: 'Rp. 1000' },
-    // produk 2
-    { name: 'PaperBag', image: '/image/content/bag.jpg', deskripsi: 'coba dari map', harga: 'Rp. 2000' },
-    // produk 3
-    { name: 'PaperBag', image: '/image/content/bag.jpg', deskripsi: 'coba dari map', harga: 'Rp. 3000' },
-    // produk 4
-    { name: 'PaperBag', image: '/image/content/bag.jpg', deskripsi: 'coba dari map', harga: 'Rp. 4000' },
-    // produk 5
-    { name: 'PaperBag', image: '/image/content/bag.jpg', deskripsi: 'coba dari map', harga: 'Rp. 5000' },
-    // produk 6
-    { name: 'PaperBag', image: '/image/content/bag.jpg', deskripsi: 'coba dari map', harga: 'Rp. 5000' }
+    { name: 'Kalender', 
+      image: '/image/produk/kalender/moun.jpg',
+      deskripsi: 'Kalender 6 lembar tipe gantungan Plat, desain full color', 
+      harga: 'Rp. 7.000' },
+    
+    { name: 'Kalender', 
+      image: '/image/produk/kalender/moun1.jpg',
+      deskripsi: 'Kalender 4 lembar tipe gantungan roll, desain full color', 
+      harga: 'Rp. 5.000' },
+      
+    { name: 'Kalender', 
+      image: '/image/produk/kalender/moun2.jpg',
+      deskripsi: 'Kalender 6 lembar tipe gantungan Plat, desain full color', 
+      harga: 'Rp. 7.000' },
+    
+    { name: 'Kalender', 
+      image: '/image/produk/kalender/moun3.jpg',
+      deskripsi: 'Kalender 1 lembar tipe gantungan Plat, desain full color', 
+      harga: 'Rp. 2000' },
+    
+    { name: 'Kalender', 
+      image: '/image/produk/kalender/moun4.jpg',
+      deskripsi: 'Kalender 12 lembar tipe gantungan Roll, desain full color', 
+      harga: 'Rp. 12.000 '},
+    
+    { name: 'Kalender', 
+      image: '/image/produk/kalender/moun5.jpg',
+      deskripsi: 'Kalender 7 lembar tipe gantungan Plat, desain full color', 
+      harga: 'Rp. 7.500' },
+    
+    
+    
   ];
 
   return (
+  <HelmetProvider>
     <div className="Container-Page">
+      <Helmet>
+        <title>kemasan makanan</title>
+        <meta name="description" 
+          content="Temukan Kalender eksklusif dan inovatif untuk Anda. Hubungi kami." />
+        <meta name="keywords" 
+          content="Kalemder, Calendar, Years Mounth " />
+        <meta name="author" 
+          content="z pack devisi asz team" />
+
+      </Helmet>
       <img src={wave} alt="wave"/>
       <Link to="/" className="kembali"><FaArrowLeft /></Link>
-      <h2 className="Container-tittle"> pilih Kategori lengkap dus makanan untuk memudahkan Anda menemukan solusi penyimpanan makanan yang ideal</h2>
+      <h2 className="Container-tittle">Gambar Di Bawah Hanya Reperensi. Produk Yang Anda Inginkan Untuk Model, Desain, Ukuran Dan Pola Potongan. Jika Produk Yang Kamu Inginkan Tidak Ada Di Bawah Bukan Berarti Kami Tidak Bisa Buat, Kami Hanya Tidak Punya Desain Dan Gambar.. Untuk Harga Di Bawah Ini Relative Bisa Naik Atau Turun. Untuk Informasi Lebih Lengkap, Hubungi Kami Dengan Mengklik Produk Yang Dipilih, Dan Klik Tombol "Alihkan Ke WhatsApp". Anda Akan Otomatis Diarahkan Ke WhatsApp Kami. </h2>
       
       <div className="container-categori-home animate">
         {products.map((product, index) => (
@@ -139,7 +174,8 @@ const Kalender = () => {
         onWhatsAppRedirect={handleWhatsAppRedirect}
       />
     </div>
+  </HelmetProvider>
   );
 };
 
-export default Kalender;
+export default DusMakanan;

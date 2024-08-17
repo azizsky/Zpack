@@ -53,7 +53,7 @@ const HomePage = () => {
           <h1 className="animate">Selamat Datang Di</h1>
           <h1 className="animate">Z Pack</h1>
           <h3 className="animate"> 
-            Kami menyediakan solusi kemasan dan percetakan yang terpercaya. Kami menawarkan berbagai produk berkualitas tinggi yang dirancang khusus untuk memenuhi kebutuhan Anda di berbagai industri. Dengan pengalaman dan dedikasi yang kuat, kami siap membantu bisnis Anda agar tampilan lebih profesional dan menarik
+            Kami menyediakan solusi packaging yang terpercaya. Kami menawarkan berbagai produk berkualitas tinggi yang dirancang khusus untuk memenuhi kebutuhan Anda di berbagai industri. Dengan pengalaman dan dedikasi yang kuat, kami siap membantu bisnis Anda agar tampilan lebih profesional dan menarik
           </h3>
         </div>
       </div>
@@ -62,43 +62,43 @@ const HomePage = () => {
         <Link to="/dus-makanan" >
           <div className="card-categori-home animate ">
             <img 
-              src="./image/content/bag.jpg" 
+              src="./image/produkhome/makanan.jpg" 
               className="img-categori-home"
-              alt="paperbag"/> 
+              alt="kemasan makanan"/> 
             <p className="text-categori-home">Dus Makanan</p>
           </div>
         </Link>
         <Link to="/dus-kosmetic" >
           <div className="card-categori-home  animate ">
             <img 
-              src="./image/content/bag.jpg" 
+              src="./image/produkhome/kosmetic.jpg" 
               className="img-categori-home"
-              alt="paperbag"/> 
+              alt="kemasan kecantikan"/> 
             <p className="text-categori-home ">Dus Kosmetic</p>
           </div>
         </Link>
         <Link to="/dus-peralatan" >
           <div className="card-categori-home  animate">
             <img 
-              src="./image/content/bag.jpg" 
+              src="./image/produkhome/peralatan.jpg" 
               className="img-categori-home "
-              alt="paperbag"/> 
+              alt="kemasan Peralatan"/> 
             <p className="text-categori-home ">Dus Peralatan</p>
           </div>
         </Link>
         <Link to="/hantag-label" >
           <div className="card-categori-home  animate ">
             <img 
-              src="./image/content/bag.jpg" 
+              src="./image/produkhome/hantag.jpg" 
               className="img-categori-home "
-              alt="paperbag"/> 
+              alt="hantag"/> 
             <p className="text-categori-home ">Hantag Label</p>
           </div>
         </Link>
         <Link to="/paperbag" >
           <div className="card-categori-home  animate ">
             <img 
-              src="./image/content/bag.jpg" 
+              src="./image/produkhome/bag.jpg" 
               className="img-categori-home "
               alt="paperbag"/> 
             <p className="text-categori-home ">PaperBag</p>
@@ -107,18 +107,18 @@ const HomePage = () => {
         <Link to="/kalender" >
           <div className="card-categori-home animate ">
             <img 
-              src="./image/content/bag.jpg" 
+              src="./image/produkhome/kalender.jpg" 
               className="img-categori-home "
-              alt="paperbag"/> 
+              alt="Kalender"/> 
             <p className="text-categori-home ">Kalender</p>
           </div>
         </Link>
         <Link to="/brosur" >
           <div className="card-categori-home animate ">
             <img 
-              src="./image/content/bag.jpg" 
+              src="./image/produkhome/brosur.jpg" 
               className="img-categori-home "
-              alt="paperbag"/> 
+              alt="Brosur"/> 
             <p className="text-categori-home ">Brosur</p>
           </div>
         </Link>
@@ -213,8 +213,7 @@ const HomePage = () => {
         </div>
       </div>
       <div className="Text-home-close animate">
-        <h3>Terima kasih atas kepercayaan dan kerjasama Anda dengan Z Pack. Kami sangat menghargai dukungan Anda dan berkomitmen untuk terus memberikan layanan dan produk terbaik. Jika Anda memiliki pertanyaan atau membutuhkan informasi lebih lanjut, jangan ragu untuk menghubungi kami. Kami siap membantu Anda.
-        </h3>
+        Terima kasih atas kepercayaan dan kerjasama Anda dengan Z Pack. Kami sangat menghargai dukungan Anda dan berkomitmen untuk terus memberikan layanan dan produk terbaik. Jika Anda memiliki pertanyaan atau membutuhkan informasi lebih lanjut, jangan ragu untuk menghubungi kami. Kami siap membantu Anda.
       </div>
       <div className="bottom-home-close">
         

@@ -4,10 +4,12 @@ import { Link } from 'react-router-dom';
   // import Icons
 import { MdMoveToInbox, MdAttachEmail, MdCalculate } 
   from "react-icons/md";
-import { BsInboxesFill, BsGearFill, BsInstagram, BsFillInfoSquareFill } 
-  from "react-icons/bs";
+import { BsInboxesFill, BsGearFill } from "react-icons/bs";
+import { FaQ } from "react-icons/fa6";
 import { IoLogoFacebook } from "react-icons/io";
 import {   FaHome, FaRegCalendarAlt, FaTags, FaToolbox, FaMap, FaShoppingBag, FaWhatsappSquare, FaInstagramSquare } from "react-icons/fa";
+import { TiInfoLarge } from "react-icons/ti";
+import { BiSolidPhotoAlbum } from "react-icons/bi";
 import { AiFillTikTok } from "react-icons/ai";
 import { SiShopee } from "react-icons/si";
 import Tokopedia from './../../utilities/home/Tokopedia.svg'; 
@@ -95,12 +97,12 @@ const Sidebar = ({isOpen}) => {
             <p className="teks-produk">Facebook</p>
           </div>
         </a>
-        <Link to="#">
+        <a href="https://www.tiktok.com/@asz.printing?_t=8niVYqalmKX&_r=1" target="_blank" rel="noreferrer">
           <div className="content-sidebar">
             <AiFillTikTok className="icons-sidebar"/>
             <p className="teks-produk">Tiktok</p>
           </div>
-        </Link>
+        </a>
       </div>
       <div className="content-toko-sidebar">
         <h2 className="title-sidebar">
@@ -138,10 +140,22 @@ const Sidebar = ({isOpen}) => {
             <p className="teks-produk">Calk Produk</p>
           </div>
         </Link>
+        <Link to="galery-produk">
+          <div className="content-sidebar">
+            <BiSolidPhotoAlbum className="icons-sidebar"/>
+            <p className="teks-produk">Gallery</p>
+          </div>
+        </Link>
         <Link to="tentang-kami">
           <div className="content-sidebar">
-            <BsFillInfoSquareFill className="icons-sidebar"/>
+            <TiInfoLarge className="icons-sidebar"/>
             <p className="teks-produk">Tentang Kami</p>
+          </div>
+        </Link>
+        <Link to="faq">
+          <div className="content-sidebar">
+            <FaQ className="icons-sidebar"/>
+            <p className="teks-produk">FaQ</p>
           </div>
         </Link>
         <Link to="#">

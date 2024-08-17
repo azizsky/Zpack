@@ -7,12 +7,12 @@ const  Tentang = ()=> {
    
    return (
    <div className="containertentang">   
-      <div className="isikami">
          <h1>Tentang Kami</h1>
+      <div className="isikami">
       <div>
          <h2>Sejarah Perusahaan:</h2>
          <h3>
-  Z Pack telah berkembang menjadi salah satu penyedia solusi kemasan dan percetakan di industri. Dengan berbekal pengalaman dan dedikasi, kami berkomitmen untuk memberikan produk berkualitas tinggi yang memenuhi kebutuhan dan harapan pelanggan kami.
+  Z Pack adalah penyedia solusi kemasan dan percetakan. Di bawah naungan ASZteam, kami memberikan produk berkualitas tinggi yang memenuhi kebutuhan dan harapan pelanggan kami. Dengan komitmen terhadap inovasi dan pelayanan terbaik, Z Pack siap menjadi mitra terpercaya Anda dalam setiap kebutuhan kemasan dan percetakan.
          </h3>
       </div>
        <div>

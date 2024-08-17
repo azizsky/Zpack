@@ -13,7 +13,8 @@
   transition: all 0.6s ease;
   color: white;
   z-index: 100;
-  overflow-y: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
   box-shadow: -1px 0 4px 0px #000000;
 }
 
@@ -115,6 +116,7 @@ Link, a{
 .content-sidebar:hover {
   background:#162e429b ;
   transform: scale(1.03);
+  border-bottom: 1px solid white;
 }
 
 

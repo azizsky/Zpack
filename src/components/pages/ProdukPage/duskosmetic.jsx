@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import "./PageAll.css";
-import useIntersectionAnimation from './../../../animation';
 import { RiCloseLine } from "react-icons/ri";
 import { FaWhatsappSquare, FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import wave from '../../../utilities/home/wave.svg';
+import {Helmet, HelmetProvider} from 'react-helmet-async';
+
+
+
+
 const Modal = ({ show, onClose, product, onWhatsAppRedirect }) => {
   const handleCloseModal = (e) => {
     // Menutup modal hanya jika event klik terjadi di luar area modal
@@ -25,14 +29,13 @@ const Modal = ({ show, onClose, product, onWhatsAppRedirect }) => {
         <h1 className="nama-produk">Produk: {product.name}</h1>
         <h2 className="deskripsi-produk">Deskripsi: {product.deskripsi} </h2>
         <p className="harga-produk">Harga: {product.harga}</p>
-        <button className="wa-direct-modal" onClick={() => onWhatsAppRedirect(product)}><FaWhatsappSquare /> WhatsApp <FaArrowRight /></button>
+        <button className="wa-direct-modal" onClick={() => onWhatsAppRedirect(product)}><FaWhatsappSquare /> AlihKan Ke WhatsApp <FaArrowRight /></button>
       </div>
     </div>
   );
 };
 
-const DusKosmetic= () => {
-  useIntersectionAnimation('.animate', 'zoom-in');
+const DusMakanan = () => {
 
   const [showModal, setShowModal] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -56,24 +59,55 @@ const DusKosmetic= () => {
 
   const products = [
     // produk 1
-    { name: 'PaperBag', image: '/image/content/bag.jpg', deskripsi: 'coba dari map', harga: 'Rp. 1000' },
-    // produk 2
-    { name: 'PaperBag', image: '/image/content/bag.jpg', deskripsi: 'coba dari map', harga: 'Rp. 2000' },
-    // produk 3
-    { name: 'PaperBag', image: '/image/content/bag.jpg', deskripsi: 'coba dari map', harga: 'Rp. 3000' },
-    // produk 4
-    { name: 'PaperBag', image: '/image/content/bag.jpg', deskripsi: 'coba dari map', harga: 'Rp. 4000' },
-    // produk 5
-    { name: 'PaperBag', image: '/image/content/bag.jpg', deskripsi: 'coba dari map', harga: 'Rp. 5000' },
-    // produk 6
-    { name: 'PaperBag', image: '/image/content/bag.jpg', deskripsi: 'coba dari map', harga: 'Rp. 5000' }
+    { name: 'Kemasan kecil', 
+      image: '/image/produk/kosmetic/skin.jpg',
+      deskripsi: 'Kemasan ukuran kecil cocok untuk lipstic, lipbalm, dll 3 color, desain gradation, laminating Dop/mate sudah termasuk finishing tinggal pakai', 
+      harga: 'Rp. 900 /pcs' },
+    
+    { name: 'Kemasan Sedang', 
+      image: '/image/produk/kosmetic/skin1.jpg',
+      deskripsi: 'Kemasan ukuran kecil cocok untuk serum, dll 2 color, hotting foil Gold, laminating Dop/mate sudah termasuk finishing tinggal pakai', 
+      harga: 'Rp. 1.100 /pcs' },
+    
+    { name: 'Kemasan Hardbox', 
+      image: '/image/produk/kosmetic/skin2.jpg',
+      deskripsi: 'Kemasan ukuran Relative cocok untuk parfum, dll, model hardbox ketebalan 2mm, laminating Dop/mate sudah termasuk finishing tinggal pakai', 
+      harga: 'Rp. 1.700 /pcs' },
+    
+    { name: 'Kemasan Besar', 
+      image: '/image/produk/kosmetic/skin3.jpg',
+      deskripsi: 'Kemasan ukuran kecil cocok untuk Handsanitizer, handbody dll full color, laminating Dop/mate sudah termasuk finishing tinggal pakai', 
+      harga: 'Rp. 1.300 /pcs' },
+    
+    { name: 'Kemasan Cream', 
+      image: '/image/produk/kosmetic/skin4.jpg',
+      deskripsi: 'Kemasan ukuran Relative cocok untuk cream, dll 2 color, desain gradation, hotting foil silver, laminating Dop/mate sudah termasuk finishing tinggal pakai', 
+      harga: 'Rp. 1.000 /pcs' },
+      
+    { name: 'Kemasan SunSkins', 
+      image: '/image/produk/kosmetic/skin5.jpg',
+      deskripsi: 'Kemasan ukuran Relative cocok untuk face powder, sunskins, dll 2 color, laminating Dop/mate sudah termasuk finishing tinggal pakai', 
+      harga: 'Rp. 950 /pcs' },
+    
+    
   ];
 
   return (
+  <HelmetProvider>
     <div className="Container-Page">
+      <Helmet>
+        <title>Kemasan kosmetic</title>
+        <meta name="description" 
+          content="Temukan berbagai jenis Kemasan kecantikan  eksklusif dan inovatif untuk produk Anda. Hubungi kami." />
+        <meta name="keywords" 
+          content="dus kecantikan, packaging, Kemasan kosmetic " />
+        <meta name="author" 
+          content="z pack devisi asz team" />
+
+      </Helmet>
       <img src={wave} alt="wave"/>
       <Link to="/" className="kembali"><FaArrowLeft /></Link>
-      <h2 className="Container-tittle"> pilih Kategori lengkap dus makanan untuk memudahkan Anda menemukan solusi penyimpanan makanan yang ideal</h2>
+      <h2 className="Container-tittle">Gambar Di Bawah Hanya Reperensi. Produk Yang Anda Inginkan Untuk Model, Desain, Ukuran Dan Pola Potongan. Jika Produk Yang Kamu Inginkan Tidak Ada Di Bawah Bukan Berarti Kami Tidak Bisa Buat, Kami Hanya Tidak Punya Desain Dan Gambar.. Untuk Harga Di Bawah Ini Relative Bisa Naik Atau Turun. Untuk Informasi Lebih Lengkap, Hubungi Kami Dengan Mengklik Produk Yang Dipilih, Dan Klik Tombol "Alihkan Ke WhatsApp". Anda Akan Otomatis Diarahkan Ke WhatsApp Kami. </h2>
       
       <div className="container-categori-home animate">
         {products.map((product, index) => (
@@ -139,7 +173,8 @@ const DusKosmetic= () => {
         onWhatsAppRedirect={handleWhatsAppRedirect}
       />
     </div>
+  </HelmetProvider>
   );
 };
 
-export default DusKosmetic;
+export default DusMakanan;

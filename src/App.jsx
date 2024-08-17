@@ -12,7 +12,9 @@ import Kalender from './components/pages/ProdukPage/kalender';
 import PaperBag from './components/pages/ProdukPage/paperbag';
 import Brosur from './components/pages/ProdukPage/brosur';
 import Tentang from './components/pages/tentangkami/tentangkami';
+import FAQ from './components/pages/tentangkami/faq';
 import Kalkulasi from  './components/pages/kalkulasi/kalkulasi';
+import Gallery from  './components/pages/galery/galery';
 const App = () => {
 
   const [isOpen, setIsOpen] = useState(false);
@@ -38,7 +40,9 @@ const App = () => {
         <Route path="/paperbag" element={<PaperBag />} />
         <Route path="/brosur" element={<Brosur />} />
         <Route path="/tentang-kami" element={<Tentang />} />
+        <Route path="/faq" element={<FAQ />} />
         <Route path="/kalkulasi-produk" element={<Kalkulasi />} />
+        <Route path="/gallery-produk" element={<Gallery />} />
       
       
       </Routes> 
